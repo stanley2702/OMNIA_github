@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMNIA — Panel de Control</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>OMNIA</h1>
+    <p class="subtitle">Explora el mundo desde cualquier lugar controlando robots reales.</p>
+  </header>
+
+  <main>
+    <section class="video-panel">
+      <h2>Vista del robot</h2>
+      <div class="video-frame">
+        <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Transmisión en vivo del robot"
+             onerror="this.onerror=null; this.src='{{ url_for('static', filename='camera_placeholder.svg') }}';">
+      </div>
+      <p id="robotStatus" class="status-text">Estado: consultando robot...</p>
+    </section>
+
+    <section class="control-panel">
+      <h2>Control de movimiento</h2>
+      <div class="dpad">
+        <button class="dpad-btn" id="btnForward">▲</button>
+        <div class="dpad-row">
+          <button class="dpad-btn" id="btnLeft">◀</button>
+          <button class="dpad-btn stop" id="btnStop">■</button>
+          <button class="dpad-btn" id="btnRight">▶</button>
+        </div>
+        <button class="dpad-btn" id="btnBackward">▼</button>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Velocidad</label>
+        <input type="range" id="speedSlider" min="0" max="255" value="200">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>WRO Future Innovators 2026 — Proyecto OMNIA — UTEC, Lima, Perú</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

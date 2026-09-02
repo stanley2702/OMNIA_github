@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f172a"/>
+  <circle cx="200" cy="120" r="40" fill="none" stroke="#38bdf8" stroke-width="4"/>
+  <rect x="160" y="90" width="80" height="60" rx="8" fill="none" stroke="#38bdf8" stroke-width="4"/>
+  <text x="200" y="200" fill="#94a3b8" font-family="Arial" font-size="16" text-anchor="middle">
+    Cámara en calibración
+  </text>
+  <text x="200" y="225" fill="#64748b" font-family="Arial" font-size="12" text-anchor="middle">
+    Streaming en desarrollo
+  </text>
+</svg>
